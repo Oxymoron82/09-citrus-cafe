@@ -1,3 +1,223 @@
+/* mobile first */
+
 html {
   font-size: 62.5%;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 1rem;
+  font-size: 1.6rem;
+  background-color: #88c15b;
+}
+
+.pii {
+  display: none;
+}
+
+/*bodyn lapset flexataan*/
+
+/* .container {
+}
+.container > * {
+} */
+
+header,
+nav,
+#vision,
+#boxes section,
+p,
+a {
+  margin-block-end: 1rem;
+}
+
+#logo {
+}
+
+.piilota {
+  display: none;
+}
+
+/*navigointtipalkki*/
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+nav ul > * {
+  flex-grow: 1;
+  flex-basis: 100%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.294);
+  border: #4d6e34 1px solid;
+  padding: 1rem;
+  border-radius: 0.7rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  text-shadow: 2px 2px rgb(0 0 0 / 49%);
+}
+
+p {
+}
+
+/*kuvat responsiiveksi*/
+figure img {
+  max-width: 100%;
+}
+
+/*vision texti ja kuva*/
+
+#vision {
+}
+#vision > * {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+#vision section {
+  font-size: 2rem;
+  padding: 0.5rem 1.5rem;
+}
+#vision figure {
+  display: none;
+}
+
+/*boxes ja sectionit*/
+
+#boxes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#boxes > * {
+  flex-grow: 1;
+  /* flex-basis: 100%;  */
+  /* margin: 0 -1rem; */
+  border: white solid 1rem;
+}
+
+/* #boxes section h2 muotoilu*/
+
+#boxes section h2 {
+  padding: 1rem;
+  background-color: lightgrey;
+  margin-block-end: 1rem;
+}
+
+/* kellutetan chevron otsikon oikeaan reunaan */
+#boxes section h2 span {
+  float: right;
+}
+
+/* #news .kapea ja .levea */
+
+#news {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#news > * {
+  background-color: white;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+#news h2 {
+  flex-basis: 100%;
+}
+#news .kapea {
+  flex-grow: 1rem;
+  padding: 1rem;
+  height: 100;
+}
+
+#news .levea {
+  flex-grow: 6;
+  padding: 1rem;
+}
+#news,
+#specials,
+#events {
+  background-color: white;
+}
+
+/* footer .some-nav */
+footer .some-nav {
+  color: white;
+  float: right;
+}
+
+/* footer osoitetiedot */
+footer .contact {
+}
+
+.contact p {
+  color: white;
+  margin-block-end: 0.5rem;
+}
+
+.contact a {
+  text-decoration: none;
+  color: black;
+  font-style: italic;
+}
+
+/* tablitin säännöt */
+
+@media only screen and (min-width: 426px) {
+  body {
+    background-color: lightblue;
+  }
+  nav ul > * {
+    flex-basis: 0;
+  }
+
+  #vision {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  #vision > * {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+
+  #vision section {
+    background-image: url("./Image/cork-bg-s.jpg");
+    background-color: antiquewhite;
+    flex-grow: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #vision figure {
+    display: block;
+  }
+
+  #news {
+    flex-basis: 100%;
+  }
+
+  #boxes #specials,
+  #boxes #events {
+    flex-basis: 0;
+  }
+
+  /* decktop säännöt */
+  @media only decktop and (min-width: 769px) {
+    body {
+      background-color: lightyellow;
+      #boxes #news {
+        flex-basis: 0;
+      }
+      #boxes #events {
+      }
+    }
+  }
 }
